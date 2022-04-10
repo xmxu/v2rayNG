@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.v2ray.ang">
+    package="com.fkapp.hwvv">
 
     <supports-screens
             android:anyDensity="true"
@@ -29,7 +29,7 @@
     <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
 
     <application
-        android:name=".AngApplication"
+        android:name="com.fkapp.hwvv.AngApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -39,7 +39,7 @@
         tools:targetApi="m">
         <activity
             android:exported="true"
-            android:name=".ui.MainActivity"
+            android:name="com.fkapp.hwvv.ui.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleTask">
             <intent-filter>
@@ -60,46 +60,46 @@
         </activity>
         <activity
             android:exported="false"
-            android:name=".ui.ServerActivity"
+            android:name="com.fkapp.hwvv.ui.ServerActivity"
             android:windowSoftInputMode="stateUnchanged" />
         <activity
             android:exported="false"
-            android:name=".ui.ServerCustomConfigActivity"
+            android:name="com.fkapp.hwvv.ui.ServerCustomConfigActivity"
             android:windowSoftInputMode="stateUnchanged" />
         <activity
             android:exported="false"
-            android:name=".ui.SettingsActivity" />
+            android:name="com.fkapp.hwvv.ui.SettingsActivity" />
         <activity
             android:exported="false"
-            android:name=".ui.PerAppProxyActivity" />
+            android:name="com.fkapp.hwvv.ui.PerAppProxyActivity" />
         <activity
             android:exported="false"
-            android:name=".ui.ScannerActivity" />
+            android:name="com.fkapp.hwvv.ui.ScannerActivity" />
         <activity
             android:exported="false"
-            android:name=".ui.LogcatActivity" />
+            android:name="com.fkapp.hwvv.ui.LogcatActivity" />
         <activity
             android:exported="false"
-            android:name=".ui.RoutingSettingsActivity"
+            android:name="com.fkapp.hwvv.ui.RoutingSettingsActivity"
             android:windowSoftInputMode="stateUnchanged" />
         <activity
             android:exported="false"
-            android:name=".ui.SubSettingActivity" />
+            android:name="com.fkapp.hwvv.ui.SubSettingActivity" />
         <activity
             android:exported="false"
-            android:name=".ui.SubEditActivity" />
+            android:name="com.fkapp.hwvv.ui.SubEditActivity" />
         <activity
             android:exported="false"
-            android:name=".ui.ScScannerActivity" />
+            android:name="com.fkapp.hwvv.ui.ScScannerActivity" />
         <activity
             android:exported="false"
-            android:name=".ui.ScSwitchActivity"
+            android:name="com.fkapp.hwvv.ui.ScSwitchActivity"
             android:excludeFromRecents="true"
             android:process=":RunSoLibV2RayDaemon"
             android:theme="@style/AppTheme.NoActionBar.Translucent" />
 
         <service
-            android:name=".service.V2RayVpnService"
+            android:name="com.fkapp.hwvv.service.V2RayVpnService"
             android:enabled="true"
             android:exported="false"
             android:label="@string/app_name"
@@ -113,7 +113,7 @@
                 android:value="true" />
         </service>
 
-        <service android:name=".service.V2RayProxyOnlyService"
+        <service android:name="com.fkapp.hwvv.service.V2RayProxyOnlyService"
                 android:exported="false"
                 android:label="@string/app_name"
                 android:process=":RunSoLibV2RayDaemon">
@@ -121,21 +121,21 @@
 
         <receiver
                 android:exported="false"
-                android:name=".receiver.WidgetProvider"
+                android:name="com.fkapp.hwvv.receiver.WidgetProvider"
                 android:process=":RunSoLibV2RayDaemon">
             <meta-data
                     android:name="android.appwidget.provider"
                     android:resource="@xml/app_widget_provider" />
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.v2ray.ang.action.widget.click" />
-                <action android:name="com.v2ray.ang.action.activity" />
+                <action android:name="com.fkapp.hwvv.action.widget.click" />
+                <action android:name="com.fkapp.hwvv.action.activity" />
             </intent-filter>
         </receiver>
 
         <service
                 android:exported="true"
-                android:name=".service.QSTileService"
+                android:name="com.fkapp.hwvv.service.QSTileService"
                 android:icon="@drawable/ic_v"
                 android:label="@string/app_tile_name"
                 android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
@@ -147,7 +147,7 @@
         <!-- =====================Tasker===================== -->
         <activity
             android:exported="true"
-            android:name=".ui.TaskerActivity"
+            android:name="com.fkapp.hwvv.ui.TaskerActivity"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name">
             <intent-filter>
@@ -157,7 +157,7 @@
 
         <receiver
             android:exported="true"
-            android:name=".receiver.TaskerReceiver"
+            android:name="com.fkapp.hwvv.receiver.TaskerReceiver"
                 android:process=":RunSoLibV2RayDaemon">
             <intent-filter>
                 <action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING" />
